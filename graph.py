@@ -91,8 +91,11 @@ class GraphNode:
         self.level = level
 
     def __repr__(self):
-        return f"data:{self.data} color:{self.color} parent:{self.parent.data
-            if self.parent else "None"} level:{self.level}"
+        return (
+            f"data:{self.data} color:{self.color}"
+            f"parent:{self.parent.data if self.parent else "None"}"
+            f" level:{self.level}"
+        )
 
 
 class BfsEx:

@@ -1,0 +1,12 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
+py_library(
+    name = "graph_lib",
+    srcs = ["graph.py"]
+)
+
+py_test(
+    name = "graph_test",
+    srcs = ["graph_test.py"],
+    deps = [":graph_lib"],
+)
