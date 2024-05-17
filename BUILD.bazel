@@ -1,4 +1,14 @@
+load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
+buildifier(
+    name = "buildifier",
+    exclude_patterns = [
+        "./bazel-*/*",
+        "./.git/*",
+    ],
+    lint_mode = "warn",
+)
 
 py_library(
     name = "graph_lib",
@@ -11,7 +21,13 @@ py_test(
     deps = [":graph_lib"],
 )
 
+# Alternatively
+# load("@pip_deps//:requirements.bzl", "requirement")
+# requirement("openai")
 py_binary(
     name = "openai_codelab",
     srcs = ["openai_codelab.py"],
+    deps = [
+        "@pip_deps//openai"
+    ]
 )

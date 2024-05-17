@@ -2,7 +2,12 @@ module(
     name = "py"
 )
 
-bazel_dep(name = "rules_python", version = "0.4.0")
+bazel_dep(name = "buildifier_prebuilt", version = "6.4.0", dev_dependency = True)
+bazel_dep(name = "rules_python", version = "0.32.2")
+
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(python_version = "3.12.3")
+
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip", dev_dependency = True)
 pip.parse(
     hub_name = "pip_deps",
