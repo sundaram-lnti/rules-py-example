@@ -10,3 +10,8 @@ py_test(
     srcs = ["graph_test.py"],
     deps = [":graph_lib"],
 )
+
+py_binary(
+    name = "openai_codelab",
+    srcs = ["openai_codelab.py"],
+)
