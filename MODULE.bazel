@@ -1,17 +1,15 @@
-module(
-    name = "py"
-)
-
 bazel_dep(name = "buildifier_prebuilt", version = "6.4.0", dev_dependency = True)
-bazel_dep(name = "rules_python", version = "0.32.2")
+
+bazel_dep(name = "rules_python", version = "0.33.1")
 
 python = use_extension("@rules_python//python/extensions:python.bzl", "python")
-python.toolchain(python_version = "3.12.3")
+python.toolchain(python_version = "3.9")
 
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip", dev_dependency = True)
 pip.parse(
-    hub_name = "pip_deps",
-    python_version = "3.12.3",
-    requirements_lock = "//:requirements.txt",
+    experimental_index_url = "https://pypi.org/simple",
+    hub_name = "pypi",
+    python_version = "3.9",
+    requirements_darwin = "//:requirements_lock_darwin.txt",
 )
-use_repo(pip, "pip_deps")
+use_repo(pip, "pypi")

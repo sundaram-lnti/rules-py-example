@@ -1,5 +1,24 @@
 load("@buildifier_prebuilt//:rules.bzl", "buildifier")
-load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+load("@rules_python//python:defs.bzl", "py_binary")
+load("@pypi//:requirements.bzl", "requirement")
+load(
+    "@pypi//:requirements.bzl",
+    "requirement",
+)
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+
+# This rule adds a convenient way to update the requirements file.
+compile_pip_requirements(
+    name = "requirements",
+    extra_args = [
+        "--allow-unsafe",
+        "--generate-hashes",
+        "--reuse-hashes",
+        "--resolver=backtracking",
+    ],
+    requirements_darwin = "requirements_lock_darwin.txt",
+    requirements_in = "requirements.in",
+)
 
 buildifier(
     name = "buildifier",
@@ -10,24 +29,11 @@ buildifier(
     lint_mode = "warn",
 )
 
-py_library(
-    name = "graph_lib",
-    srcs = ["graph.py"]
-)
-
-py_test(
-    name = "graph_test",
-    srcs = ["graph_test.py"],
-    deps = [":graph_lib"],
-)
-
-# Alternatively
-# load("@pip_deps//:requirements.bzl", "requirement")
-# requirement("openai")
 py_binary(
-    name = "openai_codelab",
-    srcs = ["openai_codelab.py"],
+    name = "dataset",
+    srcs = ["dataset.py"],
     deps = [
-        "@pip_deps//openai"
-    ]
+        requirement("tensorflow"),
+        requirement("numpy"),
+    ],
 )
