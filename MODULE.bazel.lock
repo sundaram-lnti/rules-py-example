@@ -1,0 +1,2523 @@
+{
+  "lockFileVersion": 11,
+  "registryFileHashes": {
+    "https://bcr.bazel.build/bazel_registry.json": "8a28e4aff06ee60aed2a8c281907fb8bcbf3b753c91fb5a5c57da3215d5b3497",
+    "https://bcr.bazel.build/modules/abseil-cpp/20210324.2/MODULE.bazel": "7cd0312e064fde87c8d1cd79ba06c876bd23630c83466e9500321be55c96ace2",
+    "https://bcr.bazel.build/modules/abseil-cpp/20211102.0/MODULE.bazel": "70390338f7a5106231d20620712f7cccb659cd0e9d073d1991c038eb9fc57589",
+    "https://bcr.bazel.build/modules/abseil-cpp/20211102.0/source.json": "7e3a9adf473e9af076ae485ed649d5641ad50ec5c11718103f34de03170d94ad",
+    "https://bcr.bazel.build/modules/apple_support/1.5.0/MODULE.bazel": "50341a62efbc483e8a2a6aec30994a58749bd7b885e18dd96aa8c33031e558ef",
+    "https://bcr.bazel.build/modules/apple_support/1.5.0/source.json": "eb98a7627c0bc486b57f598ad8da50f6625d974c8f723e9ea71bd39f709c9862",
+    "https://bcr.bazel.build/modules/bazel_features/1.11.0/MODULE.bazel": "f9382337dd5a474c3b7d334c2f83e50b6eaedc284253334cf823044a26de03e8",
+    "https://bcr.bazel.build/modules/bazel_features/1.11.0/source.json": "c9320aa53cd1c441d24bd6b716da087ad7e4ff0d9742a9884587596edfe53015",
+    "https://bcr.bazel.build/modules/bazel_features/1.9.1/MODULE.bazel": "8f679097876a9b609ad1f60249c49d68bfab783dd9be012faf9d82547b14815a",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.0.3/MODULE.bazel": "bcb0fd896384802d1ad283b4e4eb4d718eebd8cb820b0a2c3a347fb971afd9d8",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.2.1/MODULE.bazel": "f35baf9da0efe45fa3da1696ae906eea3d615ad41e2e3def4aeb4e8bc0ef9a7a",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.3.0/MODULE.bazel": "20228b92868bf5cfc41bda7afc8a8ba2a543201851de39d990ec957b513579c5",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.5.0/MODULE.bazel": "32880f5e2945ce6a03d1fbd588e9198c0a959bb42297b2cfaf1685b7bc32e138",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.6.1/MODULE.bazel": "8fdee2dbaace6c252131c00e1de4b165dc65af02ea278476187765e1a617b917",
+    "https://bcr.bazel.build/modules/bazel_skylib/1.6.1/source.json": "082ed5f9837901fada8c68c2f3ddc958bb22b6d654f71dd73f3df30d45d4b749",
+    "https://bcr.bazel.build/modules/buildifier_prebuilt/6.4.0/MODULE.bazel": "37389c6b5a40c59410b4226d3bb54b08637f393d66e2fa57925c6fcf68e64bf4",
+    "https://bcr.bazel.build/modules/buildifier_prebuilt/6.4.0/source.json": "83eb01b197ed0b392f797860c9da5ed1bf95f4d0ded994d694a3d44731275916",
+    "https://bcr.bazel.build/modules/buildozer/7.1.2/MODULE.bazel": "2e8dd40ede9c454042645fd8d8d0cd1527966aa5c919de86661e62953cd73d84",
+    "https://bcr.bazel.build/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
+    "https://bcr.bazel.build/modules/googletest/1.11.0/MODULE.bazel": "3a83f095183f66345ca86aa13c58b59f9f94a2f81999c093d4eeaa2d262d12f4",
+    "https://bcr.bazel.build/modules/googletest/1.11.0/source.json": "c73d9ef4268c91bd0c1cd88f1f9dfa08e814b1dbe89b5f594a9f08ba0244d206",
+    "https://bcr.bazel.build/modules/platforms/0.0.4/MODULE.bazel": "9b328e31ee156f53f3c416a64f8491f7eb731742655a47c9eec4703a71644aee",
+    "https://bcr.bazel.build/modules/platforms/0.0.5/MODULE.bazel": "5733b54ea419d5eaf7997054bb55f6a1d0b5ff8aedf0176fef9eea44f3acda37",
+    "https://bcr.bazel.build/modules/platforms/0.0.6/MODULE.bazel": "ad6eeef431dc52aefd2d77ed20a4b353f8ebf0f4ecdd26a807d2da5aa8cd0615",
+    "https://bcr.bazel.build/modules/platforms/0.0.7/MODULE.bazel": "72fd4a0ede9ee5c021f6a8dd92b503e089f46c227ba2813ff183b71616034814",
+    "https://bcr.bazel.build/modules/platforms/0.0.9/MODULE.bazel": "4a87a60c927b56ddd67db50c89acaa62f4ce2a1d2149ccb63ffd871d5ce29ebc",
+    "https://bcr.bazel.build/modules/platforms/0.0.9/source.json": "cd74d854bf16a9e002fb2ca7b1a421f4403cda29f824a765acd3a8c56f8d43e6",
+    "https://bcr.bazel.build/modules/protobuf/21.7/MODULE.bazel": "a5a29bb89544f9b97edce05642fac225a808b5b7be74038ea3640fae2f8e66a7",
+    "https://bcr.bazel.build/modules/protobuf/21.7/source.json": "bbe500720421e582ff2d18b0802464205138c06056f443184de39fbb8187b09b",
+    "https://bcr.bazel.build/modules/protobuf/3.19.0/MODULE.bazel": "6b5fbb433f760a99a22b18b6850ed5784ef0e9928a72668b66e4d7ccd47db9b0",
+    "https://bcr.bazel.build/modules/protobuf/3.19.6/MODULE.bazel": "9233edc5e1f2ee276a60de3eaa47ac4132302ef9643238f23128fea53ea12858",
+    "https://bcr.bazel.build/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
+    "https://bcr.bazel.build/modules/rules_cc/0.0.2/MODULE.bazel": "6915987c90970493ab97393024c156ea8fb9f3bea953b2f3ec05c34f19b5695c",
+    "https://bcr.bazel.build/modules/rules_cc/0.0.8/MODULE.bazel": "964c85c82cfeb6f3855e6a07054fdb159aced38e99a5eecf7bce9d53990afa3e",
+    "https://bcr.bazel.build/modules/rules_cc/0.0.9/MODULE.bazel": "836e76439f354b89afe6a911a7adf59a6b2518fafb174483ad78a2a2fde7b1c5",
+    "https://bcr.bazel.build/modules/rules_cc/0.0.9/source.json": "1f1ba6fea244b616de4a554a0f4983c91a9301640c8fe0dd1d410254115c8430",
+    "https://bcr.bazel.build/modules/rules_java/4.0.0/MODULE.bazel": "5a78a7ae82cd1a33cef56dc578c7d2a46ed0dca12643ee45edbb8417899e6f74",
+    "https://bcr.bazel.build/modules/rules_java/7.6.1/MODULE.bazel": "2f14b7e8a1aa2f67ae92bc69d1ec0fa8d9f827c4e17ff5e5f02e91caa3b2d0fe",
+    "https://bcr.bazel.build/modules/rules_java/7.6.1/source.json": "8f3f3076554e1558e8e468b2232991c510ecbcbed9e6f8c06ac31c93bcf38362",
+    "https://bcr.bazel.build/modules/rules_jvm_external/4.4.2/MODULE.bazel": "a56b85e418c83eb1839819f0b515c431010160383306d13ec21959ac412d2fe7",
+    "https://bcr.bazel.build/modules/rules_jvm_external/4.4.2/source.json": "a075731e1b46bc8425098512d038d416e966ab19684a10a34f4741295642fc35",
+    "https://bcr.bazel.build/modules/rules_license/0.0.3/MODULE.bazel": "627e9ab0247f7d1e05736b59dbb1b6871373de5ad31c3011880b4133cafd4bd0",
+    "https://bcr.bazel.build/modules/rules_license/0.0.7/MODULE.bazel": "088fbeb0b6a419005b89cf93fe62d9517c0a2b8bb56af3244af65ecfe37e7d5d",
+    "https://bcr.bazel.build/modules/rules_license/0.0.7/source.json": "355cc5737a0f294e560d52b1b7a6492d4fff2caf0bef1a315df5a298fca2d34a",
+    "https://bcr.bazel.build/modules/rules_pkg/0.7.0/MODULE.bazel": "df99f03fc7934a4737122518bb87e667e62d780b610910f0447665a7e2be62dc",
+    "https://bcr.bazel.build/modules/rules_pkg/0.7.0/source.json": "c2557066e0c0342223ba592510ad3d812d4963b9024831f7f66fd0584dd8c66c",
+    "https://bcr.bazel.build/modules/rules_proto/4.0.0/MODULE.bazel": "a7a7b6ce9bee418c1a760b3d84f83a299ad6952f9903c67f19e4edd964894e06",
+    "https://bcr.bazel.build/modules/rules_proto/5.3.0-21.7/MODULE.bazel": "e8dff86b0971688790ae75528fe1813f71809b5afd57facb44dad9e8eca631b7",
+    "https://bcr.bazel.build/modules/rules_proto/6.0.0-rc1/MODULE.bazel": "1e5b502e2e1a9e825eef74476a5a1ee524a92297085015a052510b09a1a09483",
+    "https://bcr.bazel.build/modules/rules_proto/6.0.0-rc1/source.json": "8d8448e71706df7450ced227ca6b3812407ff5e2ccad74a43a9fbe79c84e34e0",
+    "https://bcr.bazel.build/modules/rules_python/0.10.2/MODULE.bazel": "cc82bc96f2997baa545ab3ce73f196d040ffb8756fd2d66125a530031cd90e5f",
+    "https://bcr.bazel.build/modules/rules_python/0.22.1/MODULE.bazel": "26114f0c0b5e93018c0c066d6673f1a2c3737c7e90af95eff30cfee38d0bbac7",
+    "https://bcr.bazel.build/modules/rules_python/0.33.1/MODULE.bazel": "b6767735ae876488ca4210ae315709a10ed97a2ff791d7b185cb241fae4ba3f1",
+    "https://bcr.bazel.build/modules/rules_python/0.33.1/source.json": "b3108745305a93436ed2727af9ddfb31c8471e9bdd40017ca0b805e70cf28d27",
+    "https://bcr.bazel.build/modules/rules_python/0.4.0/MODULE.bazel": "9208ee05fd48bf09ac60ed269791cf17fb343db56c8226a720fbb1cdf467166c",
+    "https://bcr.bazel.build/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
+    "https://bcr.bazel.build/modules/stardoc/0.5.1/source.json": "a96f95e02123320aa015b956f29c00cb818fa891ef823d55148e1a362caacf29",
+    "https://bcr.bazel.build/modules/upb/0.0.0-20220923-a547704/MODULE.bazel": "7298990c00040a0e2f121f6c32544bab27d4452f80d9ce51349b1a28f3005c43",
+    "https://bcr.bazel.build/modules/upb/0.0.0-20220923-a547704/source.json": "f1ef7d3f9e0e26d4b23d1c39b5f5de71f584dd7d1b4ef83d9bbba6ec7a6a6459",
+    "https://bcr.bazel.build/modules/zlib/1.2.11/MODULE.bazel": "07b389abc85fdbca459b69e2ec656ae5622873af3f845e1c9d80fe179f3effa0",
+    "https://bcr.bazel.build/modules/zlib/1.2.12/MODULE.bazel": "3b1a8834ada2a883674be8cbd36ede1b6ec481477ada359cd2d3ddc562340b27",
+    "https://bcr.bazel.build/modules/zlib/1.3/MODULE.bazel": "6a9c02f19a24dcedb05572b2381446e27c272cd383aed11d41d99da9e3167a72",
+    "https://bcr.bazel.build/modules/zlib/1.3/source.json": "b6b43d0737af846022636e6e255fd4a96fee0d34f08f3830e6e0bac51465c37c"
+  },
+  "selectedYankedVersions": {},
+  "moduleExtensions": {
+    "@@apple_support~//crosstool:setup.bzl%apple_cc_configure_extension": {
+      "general": {
+        "bzlTransitiveDigest": "PjIds3feoYE8SGbbIq2SFTZy3zmxeO2tQevJZNDo7iY=",
+        "usagesDigest": "aLmqbvowmHkkBPve05yyDNGN7oh7QE9kBADr3QIZTZs=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "local_config_apple_cc": {
+            "bzlFile": "@@apple_support~//crosstool:setup.bzl",
+            "ruleClassName": "_apple_cc_autoconf",
+            "attributes": {}
+          },
+          "local_config_apple_cc_toolchains": {
+            "bzlFile": "@@apple_support~//crosstool:setup.bzl",
+            "ruleClassName": "_apple_cc_autoconf_toolchains",
+            "attributes": {}
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "apple_support~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
+      }
+    },
+    "@@buildifier_prebuilt~//:defs.bzl%buildifier_prebuilt_deps_extension": {
+      "general": {
+        "bzlTransitiveDigest": "eXBP0KrRexbBjR0KdxpnbWtfahy0r48xfQb4hBQ4Mcc=",
+        "usagesDigest": "nThSTPRdiQbhDFl8FRM2nsKJftWMtPBQHrp/mdk716w=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "buildozer_darwin_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-darwin-amd64"
+              ],
+              "downloaded_file_path": "buildozer",
+              "executable": true,
+              "sha256": "d29e347ecd6b5673d72cb1a8de05bf1b06178dd229ff5eb67fad5100c840cc8e"
+            }
+          },
+          "buildifier_linux_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-linux-amd64"
+              ],
+              "downloaded_file_path": "buildifier",
+              "executable": true,
+              "sha256": "be63db12899f48600bad94051123b1fd7b5251e7661b9168582ce52396132e92"
+            }
+          },
+          "buildozer_darwin_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-darwin-arm64"
+              ],
+              "downloaded_file_path": "buildozer",
+              "executable": true,
+              "sha256": "9b9e71bdbec5e7223871e913b65d12f6d8fa026684daf991f00e52ed36a6978d"
+            }
+          },
+          "buildozer_linux_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-linux-amd64"
+              ],
+              "downloaded_file_path": "buildozer",
+              "executable": true,
+              "sha256": "8dfd6345da4e9042daa738d7fdf34f699c5dfce4632f7207956fceedd8494119"
+            }
+          },
+          "buildozer_windows_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-windows-amd64.exe"
+              ],
+              "downloaded_file_path": "buildozer.exe",
+              "executable": true,
+              "sha256": "e7f05bf847f7c3689dd28926460ce6e1097ae97380ac8e6ae7147b7b706ba19b"
+            }
+          },
+          "buildozer_linux_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-linux-arm64"
+              ],
+              "downloaded_file_path": "buildozer",
+              "executable": true,
+              "sha256": "6559558fded658c8fa7432a9d011f7c4dcbac6b738feae73d2d5c352e5f605fa"
+            }
+          },
+          "buildifier_windows_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-windows-amd64.exe"
+              ],
+              "downloaded_file_path": "buildifier.exe",
+              "executable": true,
+              "sha256": "da8372f35e34b65fb6d997844d041013bb841e55f58b54d596d35e49680fe13c"
+            }
+          },
+          "buildifier_prebuilt_toolchains": {
+            "bzlFile": "@@buildifier_prebuilt~//:defs.bzl",
+            "ruleClassName": "_buildifier_toolchain_setup",
+            "attributes": {
+              "assets_json": "[{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"darwin\",\"sha256\":\"eeb47b2de27f60efe549348b183fac24eae80f1479e8b06cac0799c486df5bed\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildifier\",\"platform\":\"darwin\",\"sha256\":\"fa07ba0d20165917ca4cc7609f9b19a8a4392898148b7babdf6bb2a7dd963f05\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"linux\",\"sha256\":\"be63db12899f48600bad94051123b1fd7b5251e7661b9168582ce52396132e92\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildifier\",\"platform\":\"linux\",\"sha256\":\"18540fc10f86190f87485eb86963e603e41fa022f88a2d1b0cf52ff252b5e1dd\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildifier\",\"platform\":\"windows\",\"sha256\":\"da8372f35e34b65fb6d997844d041013bb841e55f58b54d596d35e49680fe13c\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"darwin\",\"sha256\":\"d29e347ecd6b5673d72cb1a8de05bf1b06178dd229ff5eb67fad5100c840cc8e\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildozer\",\"platform\":\"darwin\",\"sha256\":\"9b9e71bdbec5e7223871e913b65d12f6d8fa026684daf991f00e52ed36a6978d\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"linux\",\"sha256\":\"8dfd6345da4e9042daa738d7fdf34f699c5dfce4632f7207956fceedd8494119\",\"version\":\"v6.4.0\"},{\"arch\":\"arm64\",\"name\":\"buildozer\",\"platform\":\"linux\",\"sha256\":\"6559558fded658c8fa7432a9d011f7c4dcbac6b738feae73d2d5c352e5f605fa\",\"version\":\"v6.4.0\"},{\"arch\":\"amd64\",\"name\":\"buildozer\",\"platform\":\"windows\",\"sha256\":\"e7f05bf847f7c3689dd28926460ce6e1097ae97380ac8e6ae7147b7b706ba19b\",\"version\":\"v6.4.0\"}]"
+            }
+          },
+          "buildifier_darwin_amd64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-darwin-amd64"
+              ],
+              "downloaded_file_path": "buildifier",
+              "executable": true,
+              "sha256": "eeb47b2de27f60efe549348b183fac24eae80f1479e8b06cac0799c486df5bed"
+            }
+          },
+          "buildifier_darwin_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-darwin-arm64"
+              ],
+              "downloaded_file_path": "buildifier",
+              "executable": true,
+              "sha256": "fa07ba0d20165917ca4cc7609f9b19a8a4392898148b7babdf6bb2a7dd963f05"
+            }
+          },
+          "buildifier_linux_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-linux-arm64"
+              ],
+              "downloaded_file_path": "buildifier",
+              "executable": true,
+              "sha256": "18540fc10f86190f87485eb86963e603e41fa022f88a2d1b0cf52ff252b5e1dd"
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "buildifier_prebuilt~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ],
+          [
+            "buildifier_prebuilt~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
+      }
+    },
+    "@@platforms//host:extension.bzl%host_platform": {
+      "general": {
+        "bzlTransitiveDigest": "xelQcPZH8+tmuOHVjL9vDxMnnQNMlwj0SlvgoqBkm4U=",
+        "usagesDigest": "meSzxn3DUCcYEhq4HQwExWkWtU4EjriRBQLsZN+Q0SU=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "host_platform": {
+            "bzlFile": "@@platforms//host:extension.bzl",
+            "ruleClassName": "host_platform_repo",
+            "attributes": {}
+          }
+        },
+        "recordedRepoMappingEntries": []
+      }
+    },
+    "@@rules_python~//python/extensions:pip.bzl%pip": {
+      "general": {
+        "bzlTransitiveDigest": "qo+FAbmeNWNyCKM58+90RnXa9cOszH27MJOeg1a6aXs=",
+        "usagesDigest": "X3NdtWvOt4Pqfo+eFUwSzQqHYuPl8ZTMhooJuutKJOg=",
+        "recordedFileInputs": {
+          "@@//requirements_lock_darwin.txt": "6b77883a933630af5e8fb015766c0b595f7ba72b04d515c7764ef9450591751b"
+        },
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "pypi_39_charset_normalizer_cp39_cp39_macosx_10_9_x86_64_5b4c1454": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "charset-normalizer==3.3.2",
+              "sha256": "5b4c145409bef602a690e7cfad0a15a55c13320ff7a3ad7ca59c13bb8ba4d45d",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/66/fe/c7d3da40a66a6bf2920cce0f436fa1f62ee28aaf92f412f0bf3b84c8ad6c/charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_ml_dtypes_sdist_6488eb64": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "ml_dtypes-0.2.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "ml-dtypes==0.2.0",
+              "sha256": "6488eb642acaaf08d8020f6de0a38acee7ac324c1e6e92ee0c0fea42422cb797",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/fa/47/09ca9556bf99cfe7ddf129a3423642bd482a27a717bf115090493fa42429/ml_dtypes-0.2.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_numpy_cp39_cp39_macosx_11_0_arm64_9667575f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "numpy-1.24.4-cp39-cp39-macosx_11_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "numpy==1.24.4",
+              "sha256": "9667575fb6d13c95f1b36aca12c5ee3356bf001b714fc354eb5465ce1609e62f",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/14/27/638aaa446f39113a3ed38b37a66243e21b38110d021bfcb940c383e120f2/numpy-1.24.4-cp39-cp39-macosx_11_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_pyasn1_modules_sdist_831dbcea": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "pyasn1_modules-0.4.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "pyasn1-modules==0.4.0",
+              "sha256": "831dbcea1b177b28c9baddf4c6d1013c24c3accd14a1873fffaa6a2e905f17b6",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f7/00/e7bd1dec10667e3f2be602686537969a7ac92b0a7c5165be2e5875dc3971/pyasn1_modules-0.4.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_wrapt_cp39_cp39_macosx_10_9_x86_64_3232822c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "wrapt-1.14.1-cp39-cp39-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "wrapt==1.14.1",
+              "sha256": "3232822c7d98d23895ccc443bbdf57c7412c5a65996c30442ebe6ed3df335383",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/d9/ab/3ba5816dd466ffd7242913708771d258569825ab76fd29d7fd85b9361311/wrapt-1.14.1-cp39-cp39-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_absl_py_py3_none_any_526a04ea": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "absl_py-2.1.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "absl-py==2.1.0",
+              "sha256": "526a04eadab8b4ee719ce68f204172ead1027549089702d99b9059f129ff1308",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a2/ad/e0d3c824784ff121c03cc031f944bc7e139a8f1870ffd2845cc2dd76f6c4/absl_py-2.1.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_wrapt_sdist_380a85cf": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "wrapt-1.14.1.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "wrapt==1.14.1",
+              "sha256": "380a85cf89e0e69b7cfbe2ea9f765f004ff419f34194018a6827ac0e3edfed4d",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/11/eb/e06e77394d6cf09977d92bff310cb0392930c08a338f99af6066a5a98f92/wrapt-1.14.1.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_libclang_sdist_a1214966": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "libclang-18.1.1.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "libclang==18.1.1",
+              "sha256": "a1214966d08d73d971287fc3ead8dfaf82eb07fb197680d8b3859dbbbbf78250",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/6e/5c/ca35e19a4f142adffa27e3d652196b7362fa612243e2b916845d801454fc/libclang-18.1.1.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_markdown_py3_none_any_48f276f4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "Markdown-3.6-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "markdown==3.6",
+              "sha256": "48f276f4d8cfb8ce6527c8f79e2ee29708508bf4d40aa410fbc3b4ee832c850f",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/fc/b3/0c0c994fe49cd661084f8d5dc06562af53818cc0abefaca35bdc894577c3/Markdown-3.6-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_rsa_sdist_e38464a4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "rsa-4.9.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "rsa==4.9",
+              "sha256": "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/aa/65/7d973b89c4d2351d7fb232c2e452547ddfa243e93131e7cfa766da627b52/rsa-4.9.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_h5py_sdist_7b7e8f78": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "h5py-3.11.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "h5py==3.11.0",
+              "sha256": "7b7e8f78072a2edec87c9836f25f34203fd492a4475709a18b417a33cfb21fa9",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/52/8f/e557819155a282da36fb21f8de4730cfd10a964b52b3ae8d20157ac1c668/h5py-3.11.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_typing_extensions_py3_none_any_04e5ca03": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "typing_extensions-4.12.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "typing-extensions==4.12.2",
+              "sha256": "04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_packaging_py3_none_any_5b8f2217": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "packaging-24.1-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "packaging==24.1",
+              "sha256": "5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_idna_py3_none_any_82fee1fc": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "idna-3.7-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "idna==3.7",
+              "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_requests_py3_none_any_70761cfe": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "requests-2.32.3-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "requests==2.32.3",
+              "sha256": "70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_flatbuffers_py2_none_any_8dbdec58": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "flatbuffers-24.3.25-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "flatbuffers==24.3.25",
+              "sha256": "8dbdec58f935f3765e4f7f3cf635ac3a77f83568138d6a2311f524ec96364812",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/41/f0/7e988a019bc54b2dbd0ad4182ef2d53488bb02e58694cd79d61369e85900/flatbuffers-24.3.25-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_ml_dtypes_cp39_cp39_macosx_10_9_universal2_f00c71c8": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "ml_dtypes-0.2.0-cp39-cp39-macosx_10_9_universal2.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "ml-dtypes==0.2.0",
+              "sha256": "f00c71c8c63e03aff313bc6a7aeaac9a4f1483a921a6ffefa6d4404efd1af3d0",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f0/d8/f602f05db13d187884ddb5ae4e823d333beb28bbd3d12c057450afa3acee/ml_dtypes-0.2.0-cp39-cp39-macosx_10_9_universal2.whl"
+              ]
+            }
+          },
+          "pypi_39_zipp_py3_none_any_f091755f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "zipp-3.19.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "zipp==3.19.2",
+              "sha256": "f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/20/38/f5c473fe9b90c8debdd29ea68d5add0289f1936d6f923b6b9cc0b931194c/zipp-3.19.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_gast_sdist_9c270fe5": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "gast-0.5.4.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "gast==0.5.4",
+              "sha256": "9c270fe5f4b130969b54174de7db4e764b09b4f7f67ccfc32480e29f78348d97",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/e4/41/f26f62ebef1a80148e20951a6e9ef4d0ebbe2090124bc143da26e12a934c/gast-0.5.4.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_google_auth_sdist_ab630a13": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google-auth-2.30.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-auth==2.30.0",
+              "sha256": "ab630a1320f6720909ad76a7dbdb6841cdf5c66b328d690027e4867bdfb16688",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/be/f6/b22ef3a4b24b5b0d0fcf8426080eab66ccdfaaf73a61e37e76693c43f7f6/google-auth-2.30.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_charset_normalizer_py3_none_any_3e4d1f65": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "charset_normalizer-3.3.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "charset-normalizer==3.3.2",
+              "sha256": "3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_estimator_py2_none_any_aedf21ee": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow_estimator-2.15.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow-estimator==2.15.0",
+              "sha256": "aedf21eec7fb2dc91150fc91a1ce12bc44dbb72278a08b58e79ff87c9e28f153",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b6/c8/2f823c8958d5342eafc6dd3e922f0cc4fcf8c2e0460284cc462dae3b60a0/tensorflow_estimator-2.15.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_opt_einsum_py3_none_any_2455e59e": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "opt_einsum-3.3.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "opt-einsum==3.3.0",
+              "sha256": "2455e59e3947d3c275477df7f5205b30635e266fe6dc300e3d9f9646bfcea147",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/bc/19/404708a7e54ad2798907210462fd950c3442ea51acc8790f3da48d2bee8b/opt_einsum-3.3.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_io_gcs_filesystem_cp39_cp39_macosx_12_0_arm64_95bb229e": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_12_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow-io-gcs-filesystem==0.37.0",
+              "sha256": "95bb229e968fca943806c6ac04e81dc4966fc4a36ab83efaa061a4ecb3ea5e85",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a1/51/362ce65d37d08b02df73d6e65e867827c56031032d7b876669ad0ac87647/tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_12_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_werkzeug_py3_none_any_56433961": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "Werkzeug-2.2.3-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "werkzeug==2.2.3",
+              "sha256": "56433961bc1f12533306c624f3be5e744389ac61d722175d543e1751285da612",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f6/f8/9da63c1617ae2a1dec2fbf6412f3a0cfe9d4ce029eccbda6e1e4258ca45f/Werkzeug-2.2.3-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_certifi_py3_none_any_ddc6c8ce": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "certifi-2024.6.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "certifi==2024.6.2",
+              "sha256": "ddc6c8ce995e6987e7faf5e3f1b02b302836a0e5d98ece18392cb1a36c72ad56",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/5b/11/1e78951465b4a225519b8c3ad29769c49e0d8d157a070f681d5b6d64737f/certifi-2024.6.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_oauthlib_py3_none_any_8139f29a": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "oauthlib-3.2.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "oauthlib==3.2.2",
+              "sha256": "8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7e/80/cab10959dc1faead58dc8384a781dfbf93cb4d33d50988f7a69f1b7c9bbe/oauthlib-3.2.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_io_gcs_filesystem_cp39_cp39_macosx_10_14_x86_64_8d3ad5f3": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_10_14_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow-io-gcs-filesystem==0.37.0",
+              "sha256": "8d3ad5f30b6dbe09baefdb80e9aa7ff3869c772928b865f8ffc8402be7675a43",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/4f/23/0b3d43e6eb1dc043dfa62e84a650390421f60d44eeeb1834858174304341/tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_10_14_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_astunparse_py2_none_any_c2652417": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "astunparse-1.6.3-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "astunparse==1.6.3",
+              "sha256": "c2652417f2c8b5bb325c885ae329bdf3f86424075c4fd1a128674bc6fba4b8e8",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/2b/03/13dde6512ad7b4557eb792fbcf0c653af6076b81e5941d36ec61f7ce6028/astunparse-1.6.3-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_importlib_metadata_sdist_b78938b9": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "importlib_metadata-7.1.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "importlib-metadata==7.1.0",
+              "sha256": "b78938b926ee8d5f020fc4772d487045805a55ddbad2ecf21c6d60938dc7fcd2",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a0/fc/c4e6078d21fc4fa56300a241b87eae76766aa380a23fc450fc85bb7bf547/importlib_metadata-7.1.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_pyasn1_py2_none_any_cca4bb0f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "pyasn1-0.6.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "pyasn1==0.6.0",
+              "sha256": "cca4bb0f2df5504f02f6f8a775b6e416ff9b0b3b16f7ee80b5a3153d9b804473",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/23/7e/5f50d07d5e70a2addbccd90ac2950f81d1edd0783630651d9268d7f1db49/pyasn1-0.6.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_protobuf_py3_none_any_f0700d54": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "protobuf-4.25.3-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "protobuf==4.25.3",
+              "sha256": "f0700d54bcf45424477e46a9f0944155b46fb0639d69728739c0e47bab83f2b9",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f4/d5/db585a5e8d64af6b384c7b3a63da13df2ff86933e486ba78431736c67c25/protobuf-4.25.3-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_google_pasta_sdist_c9f2c8df": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google-pasta-0.2.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-pasta==0.2.0",
+              "sha256": "c9f2c8dfc8f96d0d5808299920721be30c9eec37f2389f28904f454565c8a16e",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/35/4a/0bd53b36ff0323d10d5f24ebd67af2de10a1117f5cf4d7add90df92756f1/google-pasta-0.2.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_requests_oauthlib_py2_none_any_7dd8a5c4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "requests_oauthlib-2.0.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "requests-oauthlib==2.0.0",
+              "sha256": "7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/3b/5d/63d4ae3b9daea098d5d6f5da83984853c1bbacd5dc826764b249fe119d24/requests_oauthlib-2.0.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_wheel_sdist_465ef92c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "wheel-0.43.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "wheel==0.43.0",
+              "sha256": "465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_rsa_py3_none_any_90260d90": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "rsa-4.9-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "rsa==4.9",
+              "sha256": "90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/49/97/fa78e3d2f65c02c8e1268b9aba606569fe97f6c8f7c2d74394553347c145/rsa-4.9-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_gast_py3_none_any_6fc4fa5f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "gast-0.5.4-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "gast==0.5.4",
+              "sha256": "6fc4fa5fa10b72fb8aab4ae58bcb023058386e67b6fa2e3e34cec5c769360316",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/fa/39/5aae571e5a5f4de9c3445dae08a530498e5c53b0e74410eeeb0991c79047/gast-0.5.4-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_urllib3_sdist_dd505485": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "urllib3-2.2.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "urllib3==2.2.2",
+              "sha256": "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_cachetools_sdist_ba29e2df": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "cachetools-5.3.3.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "cachetools==5.3.3",
+              "sha256": "ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b3/4d/27a3e6dd09011649ad5210bdf963765bc8fa81a0827a4fc01bafd2705c5b/cachetools-5.3.3.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_termcolor_py3_none_any_9297c0df": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "termcolor-2.4.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "termcolor==2.4.0",
+              "sha256": "9297c0df9c99445c2412e832e882a7884038a25617c60cea2ad69488d4040d63",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/d9/5f/8c716e47b3a50cbd7c146f45881e11d9414def768b7cd9c5e6650ec2a80a/termcolor-2.4.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_macos_cp39_cp39_macosx_12_0_arm64_9bffd0da": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow_macos-2.15.0-cp39-cp39-macosx_12_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow-macos==2.15.0",
+              "sha256": "9bffd0da3f63ef5f16b198aa225eec1220c199ec937ba6bddcd34bc5bda13fd2",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/3e/ca/4d8aede401f69ebe6dfdb8ef0681bb30ae6051b6441cb25a047e334f9a86/tensorflow_macos-2.15.0-cp39-cp39-macosx_12_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_libclang_py2_none_macosx_10_9_x86_64_6f14c3f1": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "libclang-18.1.1-py2.py3-none-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "libclang==18.1.1",
+              "sha256": "6f14c3f194704e5d09769108f03185fce7acaf1d1ae4bbb2f30a72c2400cb7c5",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/e2/e5/fc61bbded91a8830ccce94c5294ecd6e88e496cc85f6704bf350c0634b70/libclang-18.1.1-py2.py3-none-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_oauthlib_sdist_9859c409": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "oauthlib-3.2.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "oauthlib==3.2.2",
+              "sha256": "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_markupsafe_cp39_cp39_macosx_10_9_universal2_7a68b554": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_universal2.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "markupsafe==2.1.5",
+              "sha256": "7a68b554d356a91cce1236aa7682dc01df0edba8d043fd1ce607c49dd3c1edcf",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/0f/31/780bb297db036ba7b7bbede5e1d7f1e14d704ad4beb3ce53fb495d22bc62/MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_universal2.whl"
+              ]
+            }
+          },
+          "pypi_39_importlib_metadata_py3_none_any_30962b96": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "importlib_metadata-7.1.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "importlib-metadata==7.1.0",
+              "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_h5py_cp39_cp39_macosx_10_9_x86_64_f4e025e8": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "h5py-3.11.0-cp39-cp39-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "h5py==3.11.0",
+              "sha256": "f4e025e852754ca833401777c25888acb96889ee2c27e7e629a19aee288833f0",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/c2/1f/36a84945616881bd47e6c40dcdca7e929bc811725d78d001eddba6864185/h5py-3.11.0-cp39-cp39-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_numpy_sdist_80f5e3a4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "numpy-1.24.4.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "numpy==1.24.4",
+              "sha256": "80f5e3a4e498641401868df4208b74581206afbee7cf7b8329daae82676d9463",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a4/9b/027bec52c633f6556dba6b722d9a0befb40498b9ceddd29cbe67a45a127c/numpy-1.24.4.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_tensorboard_data_server_py3_none_macosx_10_9_x86_64_9fe5d242": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorboard_data_server-0.7.2-py3-none-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorboard-data-server==0.7.2",
+              "sha256": "9fe5d24221b29625dbc7328b0436ca7fc1c23de4acf4d272f1180856e32f9f60",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b7/85/dabeaf902892922777492e1d253bb7e1264cadce3cea932f7ff599e53fea/tensorboard_data_server-0.7.2-py3-none-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_packaging_sdist_026ed72c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "packaging-24.1.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "packaging==24.1",
+              "sha256": "026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_absl_py_sdist_7820790e": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "absl-py-2.1.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "absl-py==2.1.0",
+              "sha256": "7820790efbb316739cde8b4e19357243fc3608a152024288513dd968d7d959ff",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7a/8f/fc001b92ecc467cc32ab38398bd0bfb45df46e7523bf33c2ad22a505f06e/absl-py-2.1.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_wheel_py3_none_any_55c57040": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "wheel-0.43.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "wheel==0.43.0",
+              "sha256": "55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7d/cd/d7460c9a869b16c3dd4e1e403cce337df165368c71d6af229a74699622ce/wheel-0.43.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_certifi_sdist_3cd43f1c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "certifi-2024.6.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "certifi==2024.6.2",
+              "sha256": "3cd43f1c6fa7dedc5899d69d3ad0398fd018ad1a17fba83ddaf78aa46c747516",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/07/b3/e02f4f397c81077ffc52a538e0aec464016f1860c472ed33bd2a1d220cc5/certifi-2024.6.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_markdown_sdist_ed4f41f6": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "Markdown-3.6.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "markdown==3.6",
+              "sha256": "ed4f41f6daecbeeb96e576ce414c41d2d876daa9a16cb35fa8ed8c2ddfad0224",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/22/02/4785861427848cc11e452cc62bb541006a1087cf04a1de83aedd5530b948/Markdown-3.6.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_google_auth_py2_none_any_8df7da66": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google_auth-2.30.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-auth==2.30.0",
+              "sha256": "8df7da660f62757388b8a7f249df13549b3373f24388cb5d2f1dd91cc18180b5",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/28/b1/2f3dc4c814a83e618a0a624f37bcc885fd8c2f2af6f0e547288d2c4f64c2/google_auth-2.30.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_grpcio_cp39_cp39_macosx_10_9_universal2_e3d9f8d1": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "grpcio-1.64.1-cp39-cp39-macosx_10_9_universal2.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "grpcio==1.64.1",
+              "sha256": "e3d9f8d1221baa0ced7ec7322a981e28deb23749c76eeeb3d33e18b72935ab62",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/8f/5c/1ddf5ced9c34c49b7162775bfdfc03f663a1a7cd6ac22c2ad04351b88246/grpcio-1.64.1-cp39-cp39-macosx_10_9_universal2.whl"
+              ]
+            }
+          },
+          "pypi_39_google_auth_oauthlib_py2_none_any_297c1ce4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google_auth_oauthlib-1.2.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-auth-oauthlib==1.2.0",
+              "sha256": "297c1ce4cb13a99b5834c74a1fe03252e1e499716718b190f56bcb9c4abc4faf",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/71/bf/9e125754d1adb3bc4bd206c4e5df756513b1d23675ac06caa471278d1f3f/google_auth_oauthlib-1.2.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_google_auth_oauthlib_sdist_292d2d37": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google-auth-oauthlib-1.2.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-auth-oauthlib==1.2.0",
+              "sha256": "292d2d3783349f2b0734a0a0207b1e1e322ac193c2c09d8f7c613fb7cc501ea8",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/44/77/7433818d44cadd1964473b1d9ab5ecea36e6f951cf2b5188e08f7ebd5dab/google-auth-oauthlib-1.2.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_setuptools_sdist_f211a666": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "setuptools-70.0.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "setuptools==70.0.0",
+              "sha256": "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_h5py_cp39_cp39_macosx_11_0_arm64_6c4b7600": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "h5py-3.11.0-cp39-cp39-macosx_11_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "h5py==3.11.0",
+              "sha256": "6c4b760082626120031d7902cd983d8c1f424cdba2809f1067511ef283629d4b",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/3c/fb/e213586de5ea56f1747a843e725c62eef350512be57452186996ba660d52/h5py-3.11.0-cp39-cp39-macosx_11_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_pyasn1_modules_py3_none_any_be04f15b": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "pyasn1_modules-0.4.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "pyasn1-modules==0.4.0",
+              "sha256": "be04f15b66c206eed667e0bb5ab27e2b1855ea54a842e5037738099e8ca4ae0b",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/13/68/8906226b15ef38e71dc926c321d2fe99de8048e9098b5dfd38343011c886/pyasn1_modules-0.4.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_idna_sdist_028ff3aa": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "idna-3.7.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "idna==3.7",
+              "sha256": "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_six_py2_none_any_8abb2f1d": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "six-1.16.0-py2.py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "six==1.16.0",
+              "sha256": "8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_werkzeug_sdist_2e1ccc94": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "Werkzeug-2.2.3.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "werkzeug==2.2.3",
+              "sha256": "2e1ccc9417d4da358b9de6f174e3ac094391ea1d4fbef2d667865d819dfd0afe",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/02/3c/baaebf3235c87d61d6593467056d5a8fba7c75ac838b8d100a5e64eba7a0/Werkzeug-2.2.3.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_requests_oauthlib_sdist_b3dffaeb": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "requests-oauthlib-2.0.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "requests-oauthlib==2.0.0",
+              "sha256": "b3dffaebd884d8cd778494369603a9e7b58d29111bf6b41bdc2dcd87203af4e9",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/42/f2/05f29bc3913aea15eb670be136045bf5c5bbf4b99ecb839da9b422bb2c85/requests-oauthlib-2.0.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_typing_extensions_sdist_1a7ead55": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "typing_extensions-4.12.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "typing-extensions==4.12.2",
+              "sha256": "1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_grpcio_sdist_8d51dd1c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "grpcio-1.64.1.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "grpcio==1.64.1",
+              "sha256": "8d51dd1c59d5fa0f34266b80a3805ec29a1f26425c2a54736133f6d87fc4968a",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f5/9d/662a0c2181b2d7c1ec697ff06ec5ab9c37ed14e7f9e720e16f26443d233a/grpcio-1.64.1.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_requests_sdist_55365417": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "requests-2.32.3.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "requests==2.32.3",
+              "sha256": "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_markupsafe_sdist_d283d37a": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "MarkupSafe-2.1.5.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "markupsafe==2.1.5",
+              "sha256": "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_protobuf_cp37_abi3_macosx_10_9_universal2_f1279ab3": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "protobuf-4.25.3-cp37-abi3-macosx_10_9_universal2.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "protobuf==4.25.3",
+              "sha256": "f1279ab38ecbfae7e456a108c5c0681e4956d5b1090027c1de0f934dfdb4b35c",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f3/bf/26deba06a4c910a85f78245cac7698f67cedd7efe00d04f6b3e1b3506a59/protobuf-4.25.3-cp37-abi3-macosx_10_9_universal2.whl"
+              ]
+            }
+          },
+          "pypi_39_termcolor_sdist_aab9e560": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "termcolor-2.4.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "termcolor==2.4.0",
+              "sha256": "aab9e56047c8ac41ed798fa36d892a37aca6b3e9159f3e0c24bc64a9b3ac7b7a",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/10/56/d7d66a84f96d804155f6ff2873d065368b25a07222a6fd51c4f24ef6d764/termcolor-2.4.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_google_pasta_py3_none_any_b3248279": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "google_pasta-0.2.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "google-pasta==0.2.0",
+              "sha256": "b32482794a366b5366a32c92a9a9201b107821889935a02b3e51f6b432ea84ed",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a3/de/c648ef6835192e6e2cc03f40b19eeda4382c49b5bafb43d88b931c4c74ac/google_pasta-0.2.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_keras_py3_none_any_2dcc6d2e": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "keras-2.15.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "keras==2.15.0",
+              "sha256": "2dcc6d2e30cf9c951064b63c1f4c404b966c59caf09e01f3549138ec8ee0dd1f",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/fc/a7/0d4490de967a67f68a538cc9cdb259bff971c4b5787f7765dc7c8f118f71/keras-2.15.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_libclang_py2_none_macosx_11_0_arm64_83ce5045": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "libclang-18.1.1-py2.py3-none-macosx_11_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "libclang==18.1.1",
+              "sha256": "83ce5045d101b669ac38e6da8e58765f12da2d3aafb3b9b98d88b286a60964d8",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/db/ed/1df62b44db2583375f6a8a5e2ca5432bbdc3edb477942b9b7c848c720055/libclang-18.1.1-py2.py3-none-macosx_11_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_protobuf_sdist_25b5d0b4": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "protobuf-4.25.3.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "protobuf==4.25.3",
+              "sha256": "25b5d0b42fd000320bd7830b349e3b696435f3b329810427a6bcce6a5492cc5c",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/5e/d8/65adb47d921ce828ba319d6587aa8758da022de509c3862a70177a958844/protobuf-4.25.3.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_tensorboard_py3_none_any_a6f64437": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorboard-2.15.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorboard==2.15.2",
+              "sha256": "a6f6443728064d962caea6d34653e220e34ef8df764cb06a8212c17e1a8f0622",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/37/12/f6e9b9dcc310263cbd3948274e286538bd6800fd0c268850788f14a0c6d0/tensorboard-2.15.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_cachetools_py3_none_any_0abad102": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "cachetools-5.3.3-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "cachetools==5.3.3",
+              "sha256": "0abad1021d3f8325b2fc1d2e9c8b9c9d57b04c3932657a72465447332c24d945",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/fb/2b/a64c2d25a37aeb921fddb929111413049fc5f8b9a4c1aefaffaafe768d54/cachetools-5.3.3-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_cp39_cp39_macosx_10_15_x86_64_2cfcdde1": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow-2.15.0-cp39-cp39-macosx_10_15_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow==2.15.0",
+              "sha256": "2cfcdde1ff3c01be617e99ce9783c49cb11da5796ce32a31855412bd092c0bcf",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7c/95/b291edd75d76708f828039695b5561bdb6db1a95bca43f9087b794bd735a/tensorflow-2.15.0-cp39-cp39-macosx_10_15_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_astunparse_sdist_5ad93a84": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "astunparse-1.6.3.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "astunparse==1.6.3",
+              "sha256": "5ad93a8456f0d084c3456d059fd9a92cce667963232cbf763eac3bc5b7940872",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f3/af/4182184d3c338792894f34a62672919db7ca008c89abee9b564dd34d8029/astunparse-1.6.3.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_tensorboard_data_server_py3_none_any_7e0610d2": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorboard_data_server-0.7.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorboard-data-server==0.7.2",
+              "sha256": "7e0610d205889588983836ec05dc098e80f97b7e7bbff7e994ebb78f578d0ddb",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7a/13/e503968fefabd4c6b2650af21e110aa8466fe21432cd7c43a84577a89438/tensorboard_data_server-0.7.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_keras_sdist_81871d29": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "keras-2.15.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "keras==2.15.0",
+              "sha256": "81871d298c064dc4ac6b58440fdae67bfcf47c8d7ad28580fab401834c06a575",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b5/03/80072f4ee46e3c77e95b06d684fadf90a67759e4e9f1d86a563e0965c71a/keras-2.15.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_pyasn1_sdist_3a35ab2c": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "pyasn1-0.6.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "pyasn1==0.6.0",
+              "sha256": "3a35ab2c4b5ef98e17dfdec8ab074046fbda76e281c5a706ccd82328cfc8f64c",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/4a/a3/d2157f333900747f20984553aca98008b6dc843eb62f3a36030140ccec0d/pyasn1-0.6.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_six_sdist_1e61c374": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "six-1.16.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "six==1.16.0",
+              "sha256": "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_opt_einsum_sdist_59f6475f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "opt_einsum-3.3.0.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "opt-einsum==3.3.0",
+              "sha256": "59f6475f77bbc37dcf7cd748519c0ec60722e91e63ca114e68821c0c54a46549",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/7d/bf/9257e53a0e7715bc1127e15063e831f076723c6cd60985333a1c18878fb8/opt_einsum-3.3.0.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_charset_normalizer_cp39_cp39_macosx_10_9_universal2_c235ebd9": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_universal2.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "charset-normalizer==3.3.2",
+              "sha256": "c235ebd9baae02f1b77bcea61bce332cb4331dc3617d254df3323aa01ab47bd4",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/f7/9d/bcf4a449a438ed6f19790eee543a86a740c77508fbc5ddab210ab3ba3a9a/charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_universal2.whl"
+              ]
+            }
+          },
+          "pypi_39_wrapt_cp39_cp39_macosx_11_0_arm64_988635d1": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "wrapt-1.14.1-cp39-cp39-macosx_11_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "wrapt==1.14.1",
+              "sha256": "988635d122aaf2bdcef9e795435662bcd65b02f4f4c1ae37fbee7401c440b3a7",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/bb/70/73c54e24ea69a8b06ae9649e61d5e64f2b4bdfc6f202fc7794abeac1ed20/wrapt-1.14.1-cp39-cp39-macosx_11_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_zipp_sdist_bf1dcf64": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "zipp-3.19.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "zipp==3.19.2",
+              "sha256": "bf1dcf6450f873a13e952a29504887c89e6de7506209e5b1bcc3460135d4de19",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/d3/20/b48f58857d98dcb78f9e30ed2cfe533025e2e9827bbd36ea0a64cc00cbc1/zipp-3.19.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_charset_normalizer_cp39_cp39_macosx_11_0_arm64_68d1f8a9": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "charset_normalizer-3.3.2-cp39-cp39-macosx_11_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "charset-normalizer==3.3.2",
+              "sha256": "68d1f8a9e9e37c1223b656399be5d6b448dea850bed7d0f87a8311f1ff3dabb0",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/2a/9d/a6d15bd1e3e2914af5955c8eb15f4071997e7078419328fee93dfd497eb7/charset_normalizer-3.3.2-cp39-cp39-macosx_11_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_flatbuffers_sdist_de2ec5b2": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "flatbuffers-24.3.25.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "flatbuffers==24.3.25",
+              "sha256": "de2ec5b203f21441716617f38443e0a8ebf3d25bf0d9c0bb0ce68fa00ad546a4",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/a9/74/2df95ef84b214d2bee0886d572775a6f38793f5ca6d7630c3239c91104ac/flatbuffers-24.3.25.tar.gz"
+              ]
+            }
+          },
+          "pypi": {
+            "bzlFile": "@@rules_python~//python/private/bzlmod:pip_repository.bzl",
+            "ruleClassName": "pip_repository",
+            "attributes": {
+              "repo_name": "pypi",
+              "whl_map": {
+                "rsa": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"rsa-4.9-py3-none-any.whl\",\"repo\":\"pypi_39_rsa_py3_none_any_90260d90\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"rsa-4.9.tar.gz\",\"repo\":\"pypi_39_rsa_sdist_e38464a4\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "six": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"six-1.16.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_six_py2_none_any_8abb2f1d\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"six-1.16.0.tar.gz\",\"repo\":\"pypi_39_six_sdist_1e61c374\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "gast": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"gast-0.5.4-py3-none-any.whl\",\"repo\":\"pypi_39_gast_py3_none_any_6fc4fa5f\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"gast-0.5.4.tar.gz\",\"repo\":\"pypi_39_gast_sdist_9c270fe5\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "h5py": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"h5py-3.11.0-cp39-cp39-macosx_11_0_arm64.whl\",\"repo\":\"pypi_39_h5py_cp39_cp39_macosx_11_0_arm64_6c4b7600\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"h5py-3.11.0-cp39-cp39-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_h5py_cp39_cp39_macosx_10_9_x86_64_f4e025e8\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"h5py-3.11.0.tar.gz\",\"repo\":\"pypi_39_h5py_sdist_7b7e8f78\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "idna": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"idna-3.7-py3-none-any.whl\",\"repo\":\"pypi_39_idna_py3_none_any_82fee1fc\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"idna-3.7.tar.gz\",\"repo\":\"pypi_39_idna_sdist_028ff3aa\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "zipp": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"zipp-3.19.2-py3-none-any.whl\",\"repo\":\"pypi_39_zipp_py3_none_any_f091755f\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"zipp-3.19.2.tar.gz\",\"repo\":\"pypi_39_zipp_sdist_bf1dcf64\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "keras": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"keras-2.15.0-py3-none-any.whl\",\"repo\":\"pypi_39_keras_py3_none_any_2dcc6d2e\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"keras-2.15.0.tar.gz\",\"repo\":\"pypi_39_keras_sdist_81871d29\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "numpy": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"numpy-1.24.4-cp39-cp39-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_numpy_cp39_cp39_macosx_10_9_x86_64_2541312f\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"numpy-1.24.4-cp39-cp39-macosx_11_0_arm64.whl\",\"repo\":\"pypi_39_numpy_cp39_cp39_macosx_11_0_arm64_9667575f\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"numpy-1.24.4.tar.gz\",\"repo\":\"pypi_39_numpy_sdist_80f5e3a4\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "wheel": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"wheel-0.43.0-py3-none-any.whl\",\"repo\":\"pypi_39_wheel_py3_none_any_55c57040\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"wheel-0.43.0.tar.gz\",\"repo\":\"pypi_39_wheel_sdist_465ef92c\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "wrapt": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"wrapt-1.14.1-cp39-cp39-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_wrapt_cp39_cp39_macosx_10_9_x86_64_3232822c\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"wrapt-1.14.1-cp39-cp39-macosx_11_0_arm64.whl\",\"repo\":\"pypi_39_wrapt_cp39_cp39_macosx_11_0_arm64_988635d1\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"wrapt-1.14.1.tar.gz\",\"repo\":\"pypi_39_wrapt_sdist_380a85cf\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "grpcio": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"grpcio-1.64.1-cp39-cp39-macosx_10_9_universal2.whl\",\"repo\":\"pypi_39_grpcio_cp39_cp39_macosx_10_9_universal2_e3d9f8d1\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"grpcio-1.64.1.tar.gz\",\"repo\":\"pypi_39_grpcio_sdist_8d51dd1c\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "pyasn1": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"pyasn1-0.6.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_pyasn1_py2_none_any_cca4bb0f\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"pyasn1-0.6.0.tar.gz\",\"repo\":\"pypi_39_pyasn1_sdist_3a35ab2c\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "absl_py": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"absl_py-2.1.0-py3-none-any.whl\",\"repo\":\"pypi_39_absl_py_py3_none_any_526a04ea\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"absl-py-2.1.0.tar.gz\",\"repo\":\"pypi_39_absl_py_sdist_7820790e\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "certifi": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"certifi-2024.6.2-py3-none-any.whl\",\"repo\":\"pypi_39_certifi_py3_none_any_ddc6c8ce\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"certifi-2024.6.2.tar.gz\",\"repo\":\"pypi_39_certifi_sdist_3cd43f1c\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "urllib3": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"urllib3-2.2.2-py3-none-any.whl\",\"repo\":\"pypi_39_urllib3_py3_none_any_a448b2f6\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"urllib3-2.2.2.tar.gz\",\"repo\":\"pypi_39_urllib3_sdist_dd505485\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "libclang": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"libclang-18.1.1-py2.py3-none-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_libclang_py2_none_macosx_10_9_x86_64_6f14c3f1\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"libclang-18.1.1-py2.py3-none-macosx_11_0_arm64.whl\",\"repo\":\"pypi_39_libclang_py2_none_macosx_11_0_arm64_83ce5045\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"libclang-18.1.1.tar.gz\",\"repo\":\"pypi_39_libclang_sdist_a1214966\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "markdown": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"Markdown-3.6-py3-none-any.whl\",\"repo\":\"pypi_39_markdown_py3_none_any_48f276f4\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"Markdown-3.6.tar.gz\",\"repo\":\"pypi_39_markdown_sdist_ed4f41f6\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "oauthlib": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"oauthlib-3.2.2-py3-none-any.whl\",\"repo\":\"pypi_39_oauthlib_py3_none_any_8139f29a\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"oauthlib-3.2.2.tar.gz\",\"repo\":\"pypi_39_oauthlib_sdist_9859c409\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "protobuf": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"protobuf-4.25.3-py3-none-any.whl\",\"repo\":\"pypi_39_protobuf_py3_none_any_f0700d54\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"protobuf-4.25.3-cp37-abi3-macosx_10_9_universal2.whl\",\"repo\":\"pypi_39_protobuf_cp37_abi3_macosx_10_9_universal2_f1279ab3\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"protobuf-4.25.3.tar.gz\",\"repo\":\"pypi_39_protobuf_sdist_25b5d0b4\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "requests": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"requests-2.32.3-py3-none-any.whl\",\"repo\":\"pypi_39_requests_py3_none_any_70761cfe\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"requests-2.32.3.tar.gz\",\"repo\":\"pypi_39_requests_sdist_55365417\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "werkzeug": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"Werkzeug-2.2.3-py3-none-any.whl\",\"repo\":\"pypi_39_werkzeug_py3_none_any_56433961\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"Werkzeug-2.2.3.tar.gz\",\"repo\":\"pypi_39_werkzeug_sdist_2e1ccc94\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "ml_dtypes": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"ml_dtypes-0.2.0-cp39-cp39-macosx_10_9_universal2.whl\",\"repo\":\"pypi_39_ml_dtypes_cp39_cp39_macosx_10_9_universal2_f00c71c8\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"ml_dtypes-0.2.0.tar.gz\",\"repo\":\"pypi_39_ml_dtypes_sdist_6488eb64\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "packaging": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"packaging-24.1-py3-none-any.whl\",\"repo\":\"pypi_39_packaging_py3_none_any_5b8f2217\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"packaging-24.1.tar.gz\",\"repo\":\"pypi_39_packaging_sdist_026ed72c\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "termcolor": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"termcolor-2.4.0-py3-none-any.whl\",\"repo\":\"pypi_39_termcolor_py3_none_any_9297c0df\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"termcolor-2.4.0.tar.gz\",\"repo\":\"pypi_39_termcolor_sdist_aab9e560\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "astunparse": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"astunparse-1.6.3-py2.py3-none-any.whl\",\"repo\":\"pypi_39_astunparse_py2_none_any_c2652417\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"astunparse-1.6.3.tar.gz\",\"repo\":\"pypi_39_astunparse_sdist_5ad93a84\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "cachetools": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"cachetools-5.3.3-py3-none-any.whl\",\"repo\":\"pypi_39_cachetools_py3_none_any_0abad102\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"cachetools-5.3.3.tar.gz\",\"repo\":\"pypi_39_cachetools_sdist_ba29e2df\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "markupsafe": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_universal2.whl\",\"repo\":\"pypi_39_markupsafe_cp39_cp39_macosx_10_9_universal2_7a68b554\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_markupsafe_cp39_cp39_macosx_10_9_x86_64_db0b55e0\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"MarkupSafe-2.1.5.tar.gz\",\"repo\":\"pypi_39_markupsafe_sdist_d283d37a\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "opt_einsum": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"opt_einsum-3.3.0-py3-none-any.whl\",\"repo\":\"pypi_39_opt_einsum_py3_none_any_2455e59e\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"opt_einsum-3.3.0.tar.gz\",\"repo\":\"pypi_39_opt_einsum_sdist_59f6475f\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "setuptools": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"setuptools-70.0.0-py3-none-any.whl\",\"repo\":\"pypi_39_setuptools_py3_none_any_54faa7f2\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"setuptools-70.0.0.tar.gz\",\"repo\":\"pypi_39_setuptools_sdist_f211a666\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorflow": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow-2.15.0-cp39-cp39-macosx_10_15_x86_64.whl\",\"repo\":\"pypi_39_tensorflow_cp39_cp39_macosx_10_15_x86_64_2cfcdde1\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow-2.15.0-cp39-cp39-macosx_12_0_arm64.whl\",\"repo\":\"pypi_39_tensorflow_cp39_cp39_macosx_12_0_arm64_896bda03\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "flatbuffers": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"flatbuffers-24.3.25-py2.py3-none-any.whl\",\"repo\":\"pypi_39_flatbuffers_py2_none_any_8dbdec58\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"flatbuffers-24.3.25.tar.gz\",\"repo\":\"pypi_39_flatbuffers_sdist_de2ec5b2\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "google_auth": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google_auth-2.30.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_google_auth_py2_none_any_8df7da66\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google-auth-2.30.0.tar.gz\",\"repo\":\"pypi_39_google_auth_sdist_ab630a13\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorboard": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorboard-2.15.2-py3-none-any.whl\",\"repo\":\"pypi_39_tensorboard_py3_none_any_a6f64437\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "google_pasta": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google_pasta-0.2.0-py3-none-any.whl\",\"repo\":\"pypi_39_google_pasta_py3_none_any_b3248279\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google-pasta-0.2.0.tar.gz\",\"repo\":\"pypi_39_google_pasta_sdist_c9f2c8df\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "pyasn1_modules": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"pyasn1_modules-0.4.0-py3-none-any.whl\",\"repo\":\"pypi_39_pyasn1_modules_py3_none_any_be04f15b\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"pyasn1_modules-0.4.0.tar.gz\",\"repo\":\"pypi_39_pyasn1_modules_sdist_831dbcea\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorflow_macos": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow_macos-2.15.0-cp39-cp39-macosx_12_0_arm64.whl\",\"repo\":\"pypi_39_tensorflow_macos_cp39_cp39_macosx_12_0_arm64_9bffd0da\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "requests_oauthlib": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"requests_oauthlib-2.0.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_requests_oauthlib_py2_none_any_7dd8a5c4\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"requests-oauthlib-2.0.0.tar.gz\",\"repo\":\"pypi_39_requests_oauthlib_sdist_b3dffaeb\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "typing_extensions": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"typing_extensions-4.12.2-py3-none-any.whl\",\"repo\":\"pypi_39_typing_extensions_py3_none_any_04e5ca03\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"typing_extensions-4.12.2.tar.gz\",\"repo\":\"pypi_39_typing_extensions_sdist_1a7ead55\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "charset_normalizer": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"charset_normalizer-3.3.2-py3-none-any.whl\",\"repo\":\"pypi_39_charset_normalizer_py3_none_any_3e4d1f65\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_charset_normalizer_cp39_cp39_macosx_10_9_x86_64_5b4c1454\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"charset_normalizer-3.3.2-cp39-cp39-macosx_11_0_arm64.whl\",\"repo\":\"pypi_39_charset_normalizer_cp39_cp39_macosx_11_0_arm64_68d1f8a9\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"charset_normalizer-3.3.2-cp39-cp39-macosx_10_9_universal2.whl\",\"repo\":\"pypi_39_charset_normalizer_cp39_cp39_macosx_10_9_universal2_c235ebd9\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"charset-normalizer-3.3.2.tar.gz\",\"repo\":\"pypi_39_charset_normalizer_sdist_f30c3cb3\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "importlib_metadata": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"importlib_metadata-7.1.0-py3-none-any.whl\",\"repo\":\"pypi_39_importlib_metadata_py3_none_any_30962b96\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"importlib_metadata-7.1.0.tar.gz\",\"repo\":\"pypi_39_importlib_metadata_sdist_b78938b9\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "google_auth_oauthlib": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google_auth_oauthlib-1.2.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_google_auth_oauthlib_py2_none_any_297c1ce4\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"google-auth-oauthlib-1.2.0.tar.gz\",\"repo\":\"pypi_39_google_auth_oauthlib_sdist_292d2d37\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorflow_estimator": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow_estimator-2.15.0-py2.py3-none-any.whl\",\"repo\":\"pypi_39_tensorflow_estimator_py2_none_any_aedf21ee\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorboard_data_server": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorboard_data_server-0.7.2-py3-none-any.whl\",\"repo\":\"pypi_39_tensorboard_data_server_py3_none_any_7e0610d2\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorboard_data_server-0.7.2-py3-none-macosx_10_9_x86_64.whl\",\"repo\":\"pypi_39_tensorboard_data_server_py3_none_macosx_10_9_x86_64_9fe5d242\",\"target_platforms\":null,\"version\":\"3.9\"}]",
+                "tensorflow_io_gcs_filesystem": "[{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_10_14_x86_64.whl\",\"repo\":\"pypi_39_tensorflow_io_gcs_filesystem_cp39_cp39_macosx_10_14_x86_64_8d3ad5f3\",\"target_platforms\":null,\"version\":\"3.9\"},{\"config_setting\":\"//_config:is_python_3.9\",\"filename\":\"tensorflow_io_gcs_filesystem-0.37.0-cp39-cp39-macosx_12_0_arm64.whl\",\"repo\":\"pypi_39_tensorflow_io_gcs_filesystem_cp39_cp39_macosx_12_0_arm64_95bb229e\",\"target_platforms\":null,\"version\":\"3.9\"}]"
+              },
+              "default_version": "3.9",
+              "groups": {}
+            }
+          },
+          "pypi_39_urllib3_py3_none_any_a448b2f6": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "urllib3-2.2.2-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "urllib3==2.2.2",
+              "sha256": "a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/ca/1c/89ffc63a9605b583d5df2be791a27bc1a42b7c32bab68d3c8f2f73a98cd4/urllib3-2.2.2-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_setuptools_py3_none_any_54faa7f2": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "setuptools-70.0.0-py3-none-any.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "setuptools==70.0.0",
+              "sha256": "54faa7f2e8d2d11bcd2c07bed282eef1046b5c080d1c32add737d7b5817b1ad4",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/de/88/70c5767a0e43eb4451c2200f07d042a4bcd7639276003a9c54a68cfcc1f8/setuptools-70.0.0-py3-none-any.whl"
+              ]
+            }
+          },
+          "pypi_39_tensorflow_cp39_cp39_macosx_12_0_arm64_896bda03": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "tensorflow-2.15.0-cp39-cp39-macosx_12_0_arm64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "tensorflow==2.15.0",
+              "sha256": "896bda03f722700a9918d144aee5152a75f1be5e6c5045fd0683b8318a3fc9d9",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/b8/95/0fb1c154bb02f7f7b44138219926519ac19339493b32ff6eefa9bbc83769/tensorflow-2.15.0-cp39-cp39-macosx_12_0_arm64.whl"
+              ]
+            }
+          },
+          "pypi_39_markupsafe_cp39_cp39_macosx_10_9_x86_64_db0b55e0": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "markupsafe==2.1.5",
+              "sha256": "db0b55e0f3cc0be60c1f19efdde9a637c32740486004f20d1cff53c3c0ece4d2",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/6c/77/d77701bbef72892affe060cdacb7a2ed7fd68dae3b477a8642f15ad3b132/MarkupSafe-2.1.5-cp39-cp39-macosx_10_9_x86_64.whl"
+              ]
+            }
+          },
+          "pypi_39_charset_normalizer_sdist_f30c3cb3": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "charset-normalizer-3.3.2.tar.gz",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "charset-normalizer==3.3.2",
+              "sha256": "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
+              ]
+            }
+          },
+          "pypi_39_numpy_cp39_cp39_macosx_10_9_x86_64_2541312f": {
+            "bzlFile": "@@rules_python~//python/pip_install:pip_repository.bzl",
+            "ruleClassName": "whl_library",
+            "attributes": {
+              "dep_template": "@pypi//{name}:{target}",
+              "experimental_target_platforms": [
+                "osx_aarch64",
+                "osx_x86_64"
+              ],
+              "filename": "numpy-1.24.4-cp39-cp39-macosx_10_9_x86_64.whl",
+              "isolated": true,
+              "python_interpreter_target": "@@rules_python~~python~python_3_9_host//:python",
+              "quiet": true,
+              "repo": "pypi_39",
+              "requirement": "numpy==1.24.4",
+              "sha256": "2541312fbf09977f3b3ad449c4e5f4bb55d0dbf79226d7724211acc905049400",
+              "timeout": 600,
+              "urls": [
+                "https://files.pythonhosted.org/packages/9a/cd/d5b0402b801c8a8b56b04c1e85c6165efab298d2f0ab741c2406516ede3a/numpy-1.24.4-cp39-cp39-macosx_10_9_x86_64.whl"
+              ]
+            }
+          }
+        },
+        "moduleExtensionMetadata": {
+          "useAllRepos": "NO",
+          "reproducible": false
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "bazel_features~",
+            "bazel_features_globals",
+            "bazel_features~~version_extension~bazel_features_globals"
+          ],
+          [
+            "bazel_features~",
+            "bazel_features_version",
+            "bazel_features~~version_extension~bazel_features_version"
+          ],
+          [
+            "rules_python~",
+            "bazel_features",
+            "bazel_features~"
+          ],
+          [
+            "rules_python~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ],
+          [
+            "rules_python~",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "rules_python~",
+            "pypi__build",
+            "rules_python~~internal_deps~pypi__build"
+          ],
+          [
+            "rules_python~",
+            "pypi__click",
+            "rules_python~~internal_deps~pypi__click"
+          ],
+          [
+            "rules_python~",
+            "pypi__colorama",
+            "rules_python~~internal_deps~pypi__colorama"
+          ],
+          [
+            "rules_python~",
+            "pypi__importlib_metadata",
+            "rules_python~~internal_deps~pypi__importlib_metadata"
+          ],
+          [
+            "rules_python~",
+            "pypi__installer",
+            "rules_python~~internal_deps~pypi__installer"
+          ],
+          [
+            "rules_python~",
+            "pypi__more_itertools",
+            "rules_python~~internal_deps~pypi__more_itertools"
+          ],
+          [
+            "rules_python~",
+            "pypi__packaging",
+            "rules_python~~internal_deps~pypi__packaging"
+          ],
+          [
+            "rules_python~",
+            "pypi__pep517",
+            "rules_python~~internal_deps~pypi__pep517"
+          ],
+          [
+            "rules_python~",
+            "pypi__pip",
+            "rules_python~~internal_deps~pypi__pip"
+          ],
+          [
+            "rules_python~",
+            "pypi__pip_tools",
+            "rules_python~~internal_deps~pypi__pip_tools"
+          ],
+          [
+            "rules_python~",
+            "pypi__pyproject_hooks",
+            "rules_python~~internal_deps~pypi__pyproject_hooks"
+          ],
+          [
+            "rules_python~",
+            "pypi__setuptools",
+            "rules_python~~internal_deps~pypi__setuptools"
+          ],
+          [
+            "rules_python~",
+            "pypi__tomli",
+            "rules_python~~internal_deps~pypi__tomli"
+          ],
+          [
+            "rules_python~",
+            "pypi__wheel",
+            "rules_python~~internal_deps~pypi__wheel"
+          ],
+          [
+            "rules_python~",
+            "pypi__zipp",
+            "rules_python~~internal_deps~pypi__zipp"
+          ],
+          [
+            "rules_python~",
+            "pythons_hub",
+            "rules_python~~python~pythons_hub"
+          ],
+          [
+            "rules_python~~python~pythons_hub",
+            "python_3_11_host",
+            "rules_python~~python~python_3_11_host"
+          ],
+          [
+            "rules_python~~python~pythons_hub",
+            "python_3_9_host",
+            "rules_python~~python~python_3_9_host"
+          ]
+        ]
+      }
+    }
+  }
+}
